@@ -8,9 +8,5 @@ const catchAsync = (fn) => {
 
 exports.getAllFruits = catchAsync(async (req, res, next) => {
   const fruits = await Fruit.find();
-  res.status(200).json({
-    data: {
-      fruits,
-    },
-  });
+  res.status(200).json(fruits);
 });
