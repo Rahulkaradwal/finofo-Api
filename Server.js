@@ -2,6 +2,8 @@ const mongoose = require("mongoose");
 
 const app = require("./app");
 
+const PORT = 3000;
+
 // const DB = process.env.DATABASE.replace(
 //   "<PASSWORD>",
 //   process.env.DATABASE_PASSWORD
@@ -16,6 +18,6 @@ mongoose
   })
   .catch((err) => console.error("DB connection error:", err));
 
-app.listen(5000, () => {
-  console.log("Server is running on port :", port);
+app.listen(PORT, () => {
+  console.log("Server is running on port :", PORT);
 });
